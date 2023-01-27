@@ -11,11 +11,16 @@
 .light-theme {
     --bg: var(--green);
     --fontColor: var(--black);
+    --btnBg: var(--black);
+    --btnFontColor: var(--white);
 }
 
 .dark-theme {
     --bg: var(--black);
     --fontColor: var(--green);
+    --btnBg: var(--white);
+    --btnFontColor: var(--black);
+
 }
 
 * {
@@ -38,13 +43,18 @@ li {
     list-style: square;
 }
 
-#msg {
-    font-family: monospace;
-}
 
-.theme-option{
-    text-decoration: underline;
-    cursor: pointer;
-    text-transform: capitalize;
+.btn{
+    position: absolute;
+    top: 20px;
+    left: 250px;
+    border-radius: 50%;
+    border: none;
+    height: 50px;
+    width: 50px;
+    color: var(--btnFontColor);
+    background: var(--btnBg);
 }
-
+.btn:focus {
+    outline-style: none;
+}
