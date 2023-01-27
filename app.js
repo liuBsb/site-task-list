@@ -1,23 +1,13 @@
-function bd_theme() {
+'use strict'
+    const switcher = document.querySelector('.btn')
 
-    var body_class = document.body.getAttribute('class')
+    switcher.addEventListener('click', function(){
+        document.body.classList.toggle('dark-theme')
+        var class_name = document.body.className
+        console.log(class_name)
+        if (class_name == 'light-theme') {
+            this.textContent = 'Dark'
+        }else this.textContent = 'Light'
+    })
 
-    if (body_class === 'light-theme') {
-        changeTheme('dark-theme')
-    }
-
-    if (body_class === 'dark-theme'){
-        changeTheme('light-theme')
-
-    }
-
-    function changeTheme(vl) {
-
-
-        document.querySelector('.theme-option').innerHTML = body_class
-        document.body.setAttribute('class', vl)
-
-    }
-
-}
 
